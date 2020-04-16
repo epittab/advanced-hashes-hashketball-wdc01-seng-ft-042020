@@ -188,10 +188,7 @@ def team_names()
     teams_array = []
     
     hash.each do |key, value| 
-        value.each do |key, value|
-            if (key == :team_name)
-                teams_array << value
-            end
+        teams_array << value[:team_name]
        end
     end
     return teams_array
@@ -352,6 +349,7 @@ end
     player_hash = search_longest_name()
 
     return player_hash[:player_name]
+    
   end
   
 
